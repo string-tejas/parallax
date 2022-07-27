@@ -15,4 +15,18 @@ I just wanted to created a visually pleasing landing page. This is the first lan
 
 # Problems
 
-### 1. Snapping pages
+### 1. Snapping Slides
+
+Use the CSS snap attributes
+
+```css
+.container {
+   scroll-snap-type: y mandatory;
+   overflow-y: scroll;
+}
+.slide {
+   scroll-snap-align: center;
+}
+```
+
+### 2. Press enter to go to next page
