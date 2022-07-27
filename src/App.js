@@ -1,20 +1,33 @@
 import { Slide, SlideContainer } from "./components/Slide";
+import ParticleBackground from "./components/ParticleBackground";
 
 function App() {
    return (
       <SlideContainer>
-         <Slide className={"bg-blue-600"}>
-            <Text text="Slide 1" />
+         <ParticleBackground height="200vh" />
+         <Slide>
+            <Text text="Hello" />
          </Slide>
-         <Slide className={"bg-red-400"}>
-            <Text text="Slide 2" />
-         </Slide>
-         <Slide className={"bg-green-600"}>
-            <Text text="Slide 3" />
+         <Slide>
+            <Text text="How are you ?" />
          </Slide>
       </SlideContainer>
    );
 }
+
+// const Sliddydoo = () => (
+//    <SlideContainer>
+//       <Slide className={"bg-blue-600"}>
+//          <Text text="Slide 1" />
+//       </Slide>
+//       <Slide className={"bg-red-400"}>
+//          <Text text="Slide 2" />
+//       </Slide>
+//       <Slide className={"bg-green-600"}>
+//          <Text text="Slide 3" />
+//       </Slide>
+//    </SlideContainer>
+// );
 
 const Text = ({ text }) => (
    <span

@@ -8,10 +8,10 @@ I just wanted to created a visually pleasing landing page. This is the first lan
 
 # Packages Used
 
-| Package        | Description       |
-| -------------- | ----------------- |
-| `react-spring` | Smooth animations |
-| `tailwindcss`  | Just preference   |
+| Package             | Description          |
+| ------------------- | -------------------- |
+| `tailwindcss`       | Just preference      |
+| `react-tsparticles` | Add snowy background |
 
 # Problems
 
@@ -82,3 +82,14 @@ ref.current.scrollTo({
 ```
 
 ---
+
+### 3. Particle background
+
+To implement snowy particle background, I used the `react-tsparticles` package. I followed their
+[documentation](https://www.npmjs.com/package/react-tsparticles). I altered the
+`particles-config.js` file to style the canvas so that the effect will
+continue even when the slides are scrolled down.
+
+---
+
+### 4. Parallax Effect
