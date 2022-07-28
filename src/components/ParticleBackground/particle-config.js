@@ -7,10 +7,10 @@ const particleConfig = {
    background: {
       color: "transparent",
    },
-   fpsLimit: 60,
+   fpsLimit: 120,
    particles: {
       number: {
-         value: 30,
+         value: 130,
          density: {
             enable: true,
             value_area: 800,
