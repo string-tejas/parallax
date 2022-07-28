@@ -2,9 +2,10 @@ const particleConfig = {
    style: {
       position: "absolute",
       height: "200vh",
+      "z-index": "10",
    },
    background: {
-      color: "#000",
+      color: "transparent",
    },
    fpsLimit: 60,
    particles: {

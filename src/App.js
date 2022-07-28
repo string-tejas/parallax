@@ -1,16 +1,13 @@
-import { Slide, SlideContainer } from "./components/Slide";
-import ParticleBackground from "./components/ParticleBackground";
+import { SlideContainer } from "./components/Slide";
+import { Cake, Code } from "./components/Slides";
+// import ParticleBackground from "./components/ParticleBackground";
 
 function App() {
    return (
-      <SlideContainer>
-         <ParticleBackground height="200vh" />
-         <Slide>
-            <Text text="Hello" />
-         </Slide>
-         <Slide>
-            <Text text="How are you ?" />
-         </Slide>
+      <SlideContainer className="bg-black">
+         {/* <ParticleBackground height="200vh" /> */}
+         <Cake />
+         <Code />
       </SlideContainer>
    );
 }

@@ -1,8 +1,19 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect, createContext } from "react";
 import { useKey } from "../custom-hooks";
+
+export const context = createContext();
 
 export const SlideContainer = ({ className, children, ...others }) => {
    const ref = useRef();
+   const [offsetY, setOffsetY] = useState(0);
+   const handleScroll = () => setOffsetY(ref.current.scrollTop);
+
+   useEffect(() => {
+      ref.current.addEventListener("scroll", handleScroll);
+
+      return () => ref.current.removeEventListener("scroll", handleScroll);
+   }, []);
+
    const scrollToNextSlide = () => {
       const top = ref.current.scrollTop;
       const totalScrollHeight = ref.current.scrollHeight;
@@ -57,22 +68,24 @@ export const SlideContainer = ({ className, children, ...others }) => {
    useKey("Escape", scrollToPreviousSlide);
 
    return (
-      <div
-         className={
-            "w-full h-screen relative snap-y snap-mandatory overflow-y-auto " +
-            className
-         }
-         ref={ref}
-         {...others}>
-         {children}
-      </div>
+      <context.Provider value={offsetY}>
+         <div
+            className={
+               "w-full h-screen relative snap-y snap-mandatory overflow-y-auto " +
+               className
+            }
+            ref={ref}
+            {...others}>
+            {children}
+         </div>
+      </context.Provider>
    );
 };
 
 export const Slide = ({ className, children, ...others }) => {
    return (
       <div
-         className={"w-full h-full relative snap-start " + className}
+         className={"w-full min-h-full relative snap-start " + className}
          {...others}>
          {children}
       </div>
