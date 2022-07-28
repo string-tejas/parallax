@@ -1,6 +1,6 @@
 # A Single Page Site with Parallax Scrolling
 
-> Hosted [here!](https://google.com](https://parallax-rose.vercel.app/)
+> Hosted [here!](https://parallax-rose.vercel.app/)
 
 ### Why ?
 
