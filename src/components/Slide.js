@@ -1,17 +1,18 @@
 import { useRef, useState, useEffect, createContext } from "react";
 import { useKey } from "../custom-hooks";
+import { throttle } from "../utils";
 
 export const context = createContext();
 
 export const SlideContainer = ({ className, children, ...others }) => {
    const ref = useRef();
    const [offsetY, setOffsetY] = useState(0);
-   const handleScroll = () => setOffsetY(ref.current.scrollTop);
+   const handleScroll = throttle(() => setOffsetY(ref.current.scrollTop));
 
    useEffect(() => {
       ref.current.addEventListener("scroll", handleScroll);
-
-      return () => ref.current.removeEventListener("scroll", handleScroll);
+      const refPreserve = ref.current;
+      return () => refPreserve.removeEventListener("scroll", handleScroll);
    }, []);
 
    const scrollToNextSlide = () => {

@@ -7,6 +7,8 @@
 
 # testing
 /coverage
+test.html
+test.css
 
 # production
 /build
