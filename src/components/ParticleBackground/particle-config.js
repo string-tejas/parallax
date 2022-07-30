@@ -10,7 +10,7 @@ const particleConfig = {
    fpsLimit: 120,
    particles: {
       number: {
-         value: 130,
+         value: 70,
          density: {
             enable: true,
             value_area: 800,
@@ -49,7 +49,7 @@ const particleConfig = {
          random: true,
          anim: {
             enable: false,
-            speed: 40,
+            speed: 70,
             size_min: 0.1,
             sync: false,
          },
