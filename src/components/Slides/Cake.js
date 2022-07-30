@@ -44,7 +44,8 @@ const Cake = () => {
          <Confetti
             width={window.innerWidth - 20}
             height={window.innerHeight + 40}
-            numberOfPieces={140}
+            numberOfPieces={70}
+            gravity={0.3}
          />
       </Slide>
    );
