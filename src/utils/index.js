@@ -5,7 +5,8 @@ export function throttle(cb, delay = 100) {
       if (waitingArgs === null) {
          shouldWait = false;
       } else {
-         cb(...waitingArgs);
+         if (waitingArgs.length == 0) cb();
+         else cb(...waitingArgs);
          waitingArgs = null;
          setTimeout(timeoutFunc, delay);
       }
