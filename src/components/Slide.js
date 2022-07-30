@@ -4,7 +4,7 @@ import { throttle } from "../utils";
 
 export const context = createContext();
 
-export const SlideContainer = ({ className, children, ...others }) => {
+export const SlideContainer = ({ className, notify, children, ...others }) => {
    const ref = useRef();
    const [offsetY, setOffsetY] = useState(0);
    const handleScroll = throttle(() => setOffsetY(ref.current.scrollTop));
@@ -69,7 +69,7 @@ export const SlideContainer = ({ className, children, ...others }) => {
    useKey("Escape", scrollToPreviousSlide);
 
    return (
-      <context.Provider value={offsetY}>
+      <context.Provider value={{ offsetY, notify }}>
          <div
             className={
                "w-full h-screen relative snap-y snap-mandatory overflow-y-auto " +

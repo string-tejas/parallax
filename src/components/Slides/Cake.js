@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { context, Slide } from "../Slide";
 import tableImg from "../../images/table-removesj.jpg";
 import coffeeImg from "../../images/coffee.png";
 import cakeImg from "../../images/real_cake-removebg.png";
+import Confetti from "react-confetti";
 
 const Cake = () => {
-   const offsetY = useContext(context);
+   const { offsetY, notify } = useContext(context);
    const limit = 1000;
 
    const bgFactor = () => {
@@ -28,6 +29,10 @@ const Cake = () => {
       else return Math.round(14 + 0.023 * offsetY) + "px";
    };
 
+   useEffect(() => {
+      setTimeout(() => notify("Press Enter to go to next page"), 2000);
+   }, []);
+
    return (
       <Slide>
          <Table bgFactor={bgFactor} />
@@ -36,6 +41,11 @@ const Cake = () => {
          <Greeting>
             Greetings There !<br /> Welcome to our site!
          </Greeting>
+         <Confetti
+            width={window.innerWidth - 20}
+            height={window.innerHeight + 40}
+            numberOfPieces={140}
+         />
       </Slide>
    );
 };
@@ -47,6 +57,7 @@ const Greeting = ({ children }) => (
    p-16 rounded-full"
       style={{
          lineHeight: "4.5rem",
+         textShadow: "0 0 6px black",
       }}>
       {children}
    </span>
@@ -57,6 +68,7 @@ const Table = ({ bgFactor }) => (
       className="w-full -z-10"
       style={{ transform: bgFactor() }}
       src={tableImg}
+      alt="table"
    />
 );
 
@@ -66,6 +78,7 @@ const Coffee = ({ coffeeFactor }) => (
       drop-shadow-[3px_7px_6px_black] transition-[50ms]"
       style={{ transform: coffeeFactor() }}
       src={coffeeImg}
+      alt="coffee"
    />
 );
 
@@ -77,6 +90,7 @@ const ShortCake = ({ cakeFactor, cakeShadow }) => (
          filter: `drop-shadow(9px ${cakeShadow()} 9px black)`,
       }}
       src={cakeImg}
+      alt="cake"
    />
 );
 
