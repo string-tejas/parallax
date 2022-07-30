@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, createContext } from "react";
+import { useRef, useState, useEffect, useContext, createContext } from "react";
 import { useKey } from "../custom-hooks";
 // import { throttle } from "../utils";
 
@@ -21,7 +21,6 @@ export const SlideContainer = ({ className, notify, children, ...others }) => {
       const pageHeight = ref.current.clientHeight;
 
       // reached last page
-      console.dir(ref.current);
       if (top + pageHeight >= totalScrollHeight) {
          // then scroll to top
          ref.current.scrollTo({
@@ -83,10 +82,20 @@ export const SlideContainer = ({ className, notify, children, ...others }) => {
    );
 };
 
-export const Slide = ({ className, children, ...others }) => {
+export const Slide = ({ className, children, msg, icon, ...others }) => {
+   const slideRef = useRef();
+   const { notify, offsetY } = useContext(context);
+
+   useEffect(() => {
+      if (slideRef.current.offsetTop === offsetY && msg) {
+         notify(msg, icon);
+      }
+   }, [offsetY]);
+
    return (
       <div
          className={"w-full min-h-full relative snap-start " + className}
+         ref={slideRef}
          {...others}>
          {children}
       </div>

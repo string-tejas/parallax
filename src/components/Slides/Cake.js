@@ -1,11 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { context, Slide } from "../Slide";
 import tableImg from "../../images/table-removesj.jpg";
 import coffeeImg from "../../images/coffee.png";
 import cakeImg from "../../images/real_cake-removebg.png";
 
 const Cake = () => {
-   const { offsetY, notify } = useContext(context);
+   const { offsetY } = useContext(context);
    const limit = 1000;
 
    const bgFactor = () => {
@@ -28,12 +28,8 @@ const Cake = () => {
       else return Math.round(14 + 0.023 * offsetY) + "px";
    };
 
-   useEffect(() => {
-      setTimeout(() => notify("Press Enter to go to next page"), 2000);
-   }, []);
-
    return (
-      <Slide>
+      <Slide msg="Don't Press Enter">
          <Table bgFactor={bgFactor} />
          <Coffee coffeeFactor={coffeeFactor} />
          <ShortCake cakeFactor={cakeFactor} cakeShadow={cakeShadow} />

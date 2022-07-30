@@ -23,7 +23,7 @@ function App() {
    return (
       <>
          <SlideContainer className="bg-black" notify={notify}>
-            <ParticleBackground height="200vh" />
+            <ParticleBackground height="240vh" />
             <Cake />
             <Code />
          </SlideContainer>
