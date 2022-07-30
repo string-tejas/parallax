@@ -3,7 +3,6 @@ import { context, Slide } from "../Slide";
 import tableImg from "../../images/table-removesj.jpg";
 import coffeeImg from "../../images/coffee.png";
 import cakeImg from "../../images/real_cake-removebg.png";
-import Confetti from "react-confetti";
 
 const Cake = () => {
    const { offsetY, notify } = useContext(context);
@@ -41,12 +40,6 @@ const Cake = () => {
          <Greeting>
             Greetings There !<br /> Welcome to our site!
          </Greeting>
-         <Confetti
-            width={window.innerWidth - 20}
-            height={window.innerHeight + 40}
-            numberOfPieces={70}
-            gravity={0.3}
-         />
       </Slide>
    );
 };

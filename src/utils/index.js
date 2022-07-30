@@ -12,10 +12,12 @@ export function throttle(cb, delay = 100) {
    };
    return (...args) => {
       if (shouldWait) {
-         waitingArgs = args;
+         if (args) waitingArgs = args;
+         else waitingArgs = [];
          return;
       }
-      cb(...args);
+      if (args) cb(...args);
+      else cb();
       shouldWait = true;
 
       setTimeout(timeoutFunc, delay);
