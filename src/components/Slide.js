@@ -82,8 +82,14 @@ export const SlideContainer = ({ className, notify, children, ...others }) => {
    );
 };
 
-export const Slide = ({ className, children, msg, icon, ...others }) => {
-   const slideRef = useRef();
+export const Slide = ({
+   className,
+   children,
+   slideRef,
+   msg,
+   icon,
+   ...others
+}) => {
    const { notify, offsetY } = useContext(context);
 
    useEffect(() => {

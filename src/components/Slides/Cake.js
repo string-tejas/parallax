@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { context, Slide } from "../Slide";
 import tableImg from "../../images/table-removesj.jpg";
 import coffeeImg from "../../images/coffee.png";
@@ -6,6 +6,7 @@ import cakeImg from "../../images/real_cake-removebg.png";
 
 const Cake = () => {
    const { offsetY } = useContext(context);
+   const slideRef = useRef();
    const limit = 1000;
 
    const bgFactor = () => {
@@ -29,7 +30,7 @@ const Cake = () => {
    };
 
    return (
-      <Slide msg="Don't Press Enter">
+      <Slide slideRef={slideRef} msg="Don't Press Enter">
          <Table bgFactor={bgFactor} />
          <Coffee coffeeFactor={coffeeFactor} />
          <ShortCake cakeFactor={cakeFactor} cakeShadow={cakeShadow} />

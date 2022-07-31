@@ -1,6 +1,6 @@
 import { ToastContainer, toast } from "react-toastify";
 import { SlideContainer } from "./components/Slide";
-import { Cake, Code } from "./components/Slides";
+import { Cake, Mobile } from "./components/Slides";
 import "react-toastify/dist/ReactToastify.css";
 import ParticleBackground from "./components/ParticleBackground";
 
@@ -25,7 +25,7 @@ function App() {
          <SlideContainer className="bg-black" notify={notify}>
             <ParticleBackground height="240vh" />
             <Cake />
-            <Code />
+            <Mobile />
          </SlideContainer>
          <ToastContainer />
       </>
