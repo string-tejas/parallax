@@ -96,7 +96,7 @@ export const Slide = ({
       if (slideRef.current.offsetTop === offsetY && msg) {
          notify(msg, icon);
       }
-   }, [offsetY]);
+   }, [offsetY, icon, msg, notify, slideRef]);
 
    return (
       <div
