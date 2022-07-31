@@ -1,0 +1,7 @@
+navtray back        IoIosArrowBack
+navtray standby     BiRectangle
+navtray home        BiCircle
+
+dont touch          MdDoNotTouch
+no mobile           MdOutlineMobileOff
+no pull             VscGitPullRequestClosed
