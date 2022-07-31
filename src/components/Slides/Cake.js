@@ -3,6 +3,7 @@ import { context, Slide } from "../Slide";
 import tableImg from "../../images/table-removesj.jpg";
 import coffeeImg from "../../images/coffee.png";
 import cakeImg from "../../images/real_cake-removebg.png";
+import { MdDoNotTouch } from "react-icons/md";
 
 const Cake = () => {
    const { offsetY } = useContext(context);
@@ -30,7 +31,10 @@ const Cake = () => {
    };
 
    return (
-      <Slide slideRef={slideRef} msg="Don't Press Enter">
+      <Slide
+         slideRef={slideRef}
+         msg="Don't Press Enter"
+         icon={<MdDoNotTouch />}>
          <Table bgFactor={bgFactor} />
          <Coffee coffeeFactor={coffeeFactor} />
          <ShortCake cakeFactor={cakeFactor} cakeShadow={cakeShadow} />

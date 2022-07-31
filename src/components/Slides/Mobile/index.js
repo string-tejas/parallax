@@ -5,6 +5,8 @@ import lens from "../../../images/lens.png";
 import Menu from "./Menu";
 import Iframe from "./Iframe";
 import reducer, { ACTIONS } from "./reducer";
+import { MdOutlineMobileOff } from "react-icons/md";
+import NavTray from "./NavTray";
 
 export const mobileContext = createContext();
 
@@ -27,6 +29,7 @@ const Mobile = () => {
       <Slide
          slideRef={slideRef}
          msg={"Don't use the mobile"}
+         icon={<MdOutlineMobileOff />}
          className={"bg-black  h-screen flex justify-center items-center"}>
          <mobileContext.Provider value={{ state, dispatch, ACTIONS }}>
             <MobileContainer>
@@ -76,15 +79,5 @@ const Camera = ({ diameter }) => (
       />
    </div>
 );
-
-const NavTray = ({ children }) => {
-   return (
-      <div
-         className="bg-[rgba(0,0,0,0.9)] w-full h-[40px] 
-      absolute bottom-0 left-0 rounded-br-[18px] rounded-bl-[18px] z-10">
-         {children}
-      </div>
-   );
-};
 
 export default Mobile;

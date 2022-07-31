@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { mobileContext } from ".";
 import generateMenuData from "./appData";
+import { BsBatteryHalf } from "react-icons/bs";
+import { MdNetworkWifi } from "react-icons/md";
 
 const Menu = () => {
    const { dispatch, ACTIONS } = useContext(mobileContext);
@@ -18,10 +20,12 @@ const Menu = () => {
 const NotifTray = () => (
    <div
       className="absolute top-0 left-0 w-full h-[24px] rounded-tr-[19px] 
-      rounded-tl-[19px] text-white px-4 text-[0.8rem] flex justify-end
+      rounded-tl-[19px] text-white px-4 text-[0.9rem] flex justify-end
       items-center"
       style={{ background: "rgba(0,0,0,0.9)" }}>
-      <span style={{ marginRight: "auto" }}>16:04</span>
+      <span style={{ marginRight: "auto",fontSize:'0.7rem' }}>16:04</span>
+      <MdNetworkWifi className="mr-2" />
+      <BsBatteryHalf />
    </div>
 );
 
