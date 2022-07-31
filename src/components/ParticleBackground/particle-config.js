@@ -3,6 +3,7 @@ const particleConfig = {
       position: "absolute",
       height: "200vh",
       "z-index": "10",
+      "pointer-events": "none",
    },
    background: {
       color: "transparent",
