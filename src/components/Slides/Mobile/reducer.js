@@ -29,7 +29,7 @@ export const reducer = (state, { type, payload }) => {
          else if (state.current !== ACTIONS.menu)
             return {
                current: ACTIONS.standby,
-               msg: `Standby afford karne ka paisa nahi hai to maine ${state.current} bhi uda dala 🚶‍♂️`,
+               msg: `Standby afford karne ka paisa nahi hai to maine ${state.label} bhi uda dala 🚶‍♂️`,
             };
          else return { current: ACTIONS.standby, msg: "No apps on standby" };
       case ACTIONS.code:

@@ -2,7 +2,7 @@ import { useRef, useReducer, createContext } from "react";
 import Slide from "../../Slide";
 import wallpaper from "../../../images/watson.png";
 import lens from "../../../images/lens.png";
-import Menu from "./Menu";
+import Menu, { StandBy } from "./Menu";
 import Iframe from "./Iframe";
 import reducer, { ACTIONS } from "./reducer";
 import { MdOutlineMobileOff } from "react-icons/md";
@@ -20,6 +20,8 @@ const Mobile = () => {
             return <Menu />;
          case ACTIONS.iframe:
             return <Iframe url={state.url} label={state.label} />;
+         case ACTIONS.standby:
+            return <StandBy msg={state.msg} />;
          default:
             return <Menu />;
       }
