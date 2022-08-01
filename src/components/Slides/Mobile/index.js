@@ -12,6 +12,19 @@ export const mobileContext = createContext();
 
 const Mobile = () => {
    const slideRef = useRef();
+
+   return (
+      <Slide
+         slideRef={slideRef}
+         msg={"Don't use the mobile"}
+         icon={<MdOutlineMobileOff />}
+         className={"bg-black  h-screen flex justify-center items-center"}>
+         <SmartPhone />
+      </Slide>
+   );
+};
+
+const SmartPhone = () => {
    const [state, dispatch] = useReducer(reducer, { current: ACTIONS.menu });
 
    const currentActivity = () => {
@@ -26,23 +39,16 @@ const Mobile = () => {
             return <Menu />;
       }
    };
-
    return (
-      <Slide
-         slideRef={slideRef}
-         msg={"Don't use the mobile"}
-         icon={<MdOutlineMobileOff />}
-         className={"bg-black  h-screen flex justify-center items-center"}>
-         <mobileContext.Provider value={{ state, dispatch, ACTIONS }}>
-            <MobileContainer>
-               <MobileScreen>
-                  <Camera diameter="30px" />
-                  {currentActivity()}
-                  <NavTray />
-               </MobileScreen>
-            </MobileContainer>
-         </mobileContext.Provider>
-      </Slide>
+      <mobileContext.Provider value={{ state, dispatch, ACTIONS }}>
+         <MobileContainer>
+            <MobileScreen>
+               <Camera diameter="30px" />
+               {currentActivity()}
+               <NavTray />
+            </MobileScreen>
+         </MobileContainer>
+      </mobileContext.Provider>
    );
 };
 

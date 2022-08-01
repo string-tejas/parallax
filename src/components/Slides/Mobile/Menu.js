@@ -24,7 +24,7 @@ export const StandBy = ({ msg }) => {
    const { dispatch, ACTIONS } = useContext(mobileContext);
 
    return (
-      <div className="w-full h-full flex justify-center items-end relative">
+      <div className="w-full h-full flex justify-center items-end relative z-0">
          <NotifTray />
          <div
             className="w-full relative h-[calc(100%-24px)] rounded-bl-[20px] rounded-br-[20px] flex justify-center items-center"
@@ -65,7 +65,7 @@ const NotifTray = () => {
       <div
          className="absolute top-0 left-0 w-full h-[24px] rounded-tr-[19px] 
       rounded-tl-[19px] text-white px-4 text-[0.9rem] flex justify-end
-      items-center z-10"
+      items-center"
          style={{ background: "rgba(0,0,0,0.9)" }}>
          <span style={{ marginRight: "auto", fontSize: "0.7rem" }}>{time}</span>
          <MdNetworkWifi className="mr-2" />
