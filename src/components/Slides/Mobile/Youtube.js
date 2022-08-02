@@ -8,7 +8,7 @@ const Youtube = ({ img }) => {
     <div className="w-full relative h-full bg-black rounded-[18px] flex items-center justify-center">
       {loading && (
         <img
-          className="absolute w-[70%] z-10 top-1/2 left-1/2"
+          className="absolute w-[70%] top-1/2 left-1/2"
           style={{ transform: "translate(-50%, -50%)" }}
           src={img}
           alt="youtube"
