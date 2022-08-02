@@ -19,3 +19,55 @@ export const useKey = (code, cb) => {
       };
    });
 };
+
+export const useDragScrollX = (options) => {
+   const divRef = useRef();
+
+   let isMouseDown = false,
+      startX,
+      scrollLeftWhenMouseDown;
+
+   const handleMouseDown = (e) => {
+      isMouseDown = true;
+      startX = e.pageX - divRef.current.offsetLeft;
+      scrollLeftWhenMouseDown = divRef.current.scrollLeft;
+   };
+
+   const handleMouseMove = (e) => {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      const x = e.pageX - divRef.current.offsetLeft;
+      const walk = x - startX;
+      divRef.current.scrollLeft = scrollLeftWhenMouseDown - walk;
+   };
+
+   const handleMouseLeave = (e) => {
+      isMouseDown = false;
+      if (options.snap) {
+         const snapScroll =
+            Math.round(divRef.current.scrollLeft / divRef.current.clientWidth) *
+            divRef.current.clientWidth;
+         divRef.current.scrollTo({
+            left: snapScroll,
+            behavior: "smooth",
+         });
+      }
+   };
+
+   useEffect(() => {
+      const ref = divRef.current;
+      ref.addEventListener("mousedown", handleMouseDown);
+      ref.addEventListener("mousemove", handleMouseMove);
+      ref.addEventListener("mouseleave", handleMouseLeave);
+      ref.addEventListener("mouseup", handleMouseLeave);
+
+      return () => {
+         ref.removeEventListener("mousedown", handleMouseDown);
+         ref.removeEventListener("mousemove", handleMouseMove);
+         ref.removeEventListener("mouseleave", handleMouseLeave);
+         ref.removeEventListener("mouseup", handleMouseLeave);
+      };
+   });
+
+   return divRef;
+};

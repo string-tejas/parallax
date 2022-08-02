@@ -7,6 +7,7 @@ import Iframe from "./Iframe";
 import reducer, { ACTIONS } from "./reducer";
 import { MdOutlineMobileOff } from "react-icons/md";
 import NavTray from "./NavTray";
+import Gallery from "./Gallery";
 
 export const mobileContext = createContext();
 
@@ -32,9 +33,13 @@ const SmartPhone = () => {
          case ACTIONS.menu:
             return <Menu />;
          case ACTIONS.iframe:
-            return <Iframe url={state.url} label={state.label} />;
+            return (
+               <Iframe url={state.url} label={state.label} img={state.img} />
+            );
          case ACTIONS.standby:
             return <StandBy msg={state.msg} />;
+         case ACTIONS.gallery:
+            return <Gallery />;
          default:
             return <Menu />;
       }

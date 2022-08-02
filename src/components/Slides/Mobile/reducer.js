@@ -14,10 +14,11 @@ export const reducer = (state, { type, payload }) => {
                current: ACTIONS.iframe,
                url: payload.url,
                label: payload.label,
+               img: payload.img,
             };
          else return state;
       case ACTIONS.gallery:
-         return { current: ACTIONS.gallery };
+         return { current: ACTIONS.gallery, label: payload.label };
       case ACTIONS.menu:
          return { current: ACTIONS.menu };
       case ACTIONS.standby:

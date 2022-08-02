@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const Iframe = ({ url, label }) => {
+const Iframe = ({ url, label, img }) => {
    const [loading, setLoading] = useState(true);
    return (
       <div className="h-full w-full relative">
          <Navbar label={label} />
-         {loading && <Loading msg="Opening..." />}
+         {loading && <Loading img={img} />}
          <iframe
             className="h-[calc(100%_-_40px_-_40px)] w-full bg-white"
             title="mobile-iframe"
@@ -24,11 +24,11 @@ const Navbar = ({ label }) => (
    </div>
 );
 
-const Loading = ({ msg }) => (
+const Loading = ({ img }) => (
    <div
-      className="absolute top-1/2 left-1/2 text-gray-700"
+      className="absolute top-1/2 left-1/2 text-gray-700 w-full h-1/2 flex justify-center items-center"
       style={{ transform: "translate(-50%, -50%)" }}>
-      {msg}
+      <img className="w-[50%]" src={img} alt={img} />
    </div>
 );
 

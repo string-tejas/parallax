@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.remove-scrollbar::-webkit-scrollbar {
+   display: none;
+}
+
 .ripple-effect {
    position: absolute;
    border-radius: 50%;

@@ -13,6 +13,7 @@ const generateMenuData = (dispatch, ACTIONS) => {
                payload: {
                   url: "https://note-web-app-neon.vercel.app/",
                   label: "Notes",
+                  img: "/img/icons/notes.png",
                },
             });
          },
@@ -26,6 +27,7 @@ const generateMenuData = (dispatch, ACTIONS) => {
                payload: {
                   url: "https://calculator-web-app-pi.vercel.app/",
                   label: "Calculator",
+                  img: "/img/icons/calculator.png",
                },
             });
          },
@@ -33,6 +35,14 @@ const generateMenuData = (dispatch, ACTIONS) => {
       {
          label: "Gallery",
          img: "/img/icons/gallery.png",
+         onClick: () => {
+            dispatch({
+               type: ACTIONS.gallery,
+               payload: {
+                  label: "Gallery",
+               },
+            });
+         },
       },
       {
          label: "YouTube",

@@ -54,7 +54,7 @@ export const StandBy = ({ msg }) => {
    );
 };
 
-const NotifTray = () => {
+export const NotifTray = () => {
    const [time, setTime] = useState(new Date().toTimeString().substring(0, 5));
 
    setInterval(() => {
@@ -65,7 +65,7 @@ const NotifTray = () => {
       <div
          className="absolute top-0 left-0 w-full h-[24px] rounded-tr-[19px] 
       rounded-tl-[19px] text-white px-4 text-[0.9rem] flex justify-end
-      items-center"
+      items-center z-[2]"
          style={{ background: "rgba(0,0,0,0.9)" }}>
          <span style={{ marginRight: "auto", fontSize: "0.7rem" }}>{time}</span>
          <MdNetworkWifi className="mr-2" />
