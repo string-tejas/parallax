@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+img {
+  user-select: none;
+}
+
 .remove-scrollbar::-webkit-scrollbar {
-   display: none;
+  display: none;
 }
 
 .ripple-effect {
-   position: absolute;
-   border-radius: 50%;
-   width: 10px;
-   height: 10px;
-   animation: rippling 800ms;
-   z-index: 10;
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: rippling 800ms;
+  z-index: 10;
 }
 
 @keyframes rippling {
-   0% {
-      opacity: 0.5;
-      transform: scale(1);
-   }
-   100% {
-      opacity: 0;
-      transform: scale(30);
-   }
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(30);
+  }
 }
