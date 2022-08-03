@@ -4,7 +4,12 @@ const generateMenuData = (dispatch, ACTIONS) => {
       label: "Code",
       img: "/img/icons/code.png",
       onClick: () => {
-        dispatch({ type: ACTIONS.code });
+        dispatch({
+          type: ACTIONS.code,
+          payload: {
+            label: "Code",
+          },
+        });
       },
     },
     {

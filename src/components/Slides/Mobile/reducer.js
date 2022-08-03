@@ -44,11 +44,15 @@ export const reducer = (state, { type, payload }) => {
 
     //   youtube prank
     case ACTIONS.youtube:
-      return { current: ACTIONS.youtube, img: payload.img };
+      return {
+        current: ACTIONS.youtube,
+        img: payload.img,
+        label: payload.label,
+      };
 
     // code app
     case ACTIONS.code:
-      return { current: ACTIONS.code };
+      return { current: ACTIONS.code, label: payload.label };
     default:
       return { ...state };
   }
