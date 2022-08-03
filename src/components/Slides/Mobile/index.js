@@ -9,6 +9,7 @@ import { MdOutlineMobileOff } from "react-icons/md";
 import NavTray from "./NavTray";
 import Gallery from "./Gallery";
 import Youtube from "./Youtube";
+import panda from "../../../images/panda.jpg";
 
 export const mobileContext = createContext();
 
@@ -20,7 +21,8 @@ const Mobile = () => {
       slideRef={slideRef}
       msg={"Don't use the mobile"}
       icon={<MdOutlineMobileOff />}
-      className={"bg-black  h-screen flex justify-center items-center"}
+      className={"h-screen flex justify-center items-center"}
+      style={{ background: `url(${panda})` }}
     >
       <SmartPhone />
     </Slide>

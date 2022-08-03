@@ -105,7 +105,10 @@ const Curtains = ({ slideRef }) => {
 };
 
 const Cover = () => (
-  <div className="absolute top-0 left-0 h-screen w-screen"></div>
+  <div
+    className="absolute top-0 left-0 h-screen w-screen"
+    style={{ boxShadow: "inset 0 0 220px 30px black" }}
+  ></div>
 );
 
 export default Curtain;
