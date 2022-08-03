@@ -9,6 +9,7 @@ import { MdOutlineMobileOff } from "react-icons/md";
 import NavTray from "./NavTray";
 import Gallery from "./Gallery";
 import Youtube from "./Youtube";
+import Code from "./Code";
 import panda from "../../../images/panda.jpg";
 
 export const mobileContext = createContext();
@@ -44,6 +45,8 @@ const SmartPhone = () => {
         return <Gallery />;
       case ACTIONS.youtube:
         return <Youtube img={state.img} />;
+      case ACTIONS.code:
+        return <Code />;
       default:
         return <Menu />;
     }
