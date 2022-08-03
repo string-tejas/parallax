@@ -94,7 +94,11 @@ export const Slide = ({
   const { notify, offsetY } = useContext(context);
 
   useEffect(() => {
-    if (slideRef.current.offsetTop === Math.ceil(offsetY) && msg) {
+    const offsetTop = slideRef.current.offsetTop;
+    if (
+      (offsetTop === Math.ceil(offsetY) || offsetTop === Math.floor(offsetY)) &&
+      msg
+    ) {
       notify(msg, icon);
     }
   }, [offsetY, icon, msg, notify, slideRef]);

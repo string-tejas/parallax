@@ -1,6 +1,6 @@
 import { ToastContainer, toast } from "react-toastify";
 import { SlideContainer } from "./components/Slide";
-import { Cake, Curtain, Mobile, Photos } from "./components/Slides";
+import { Cake, Curtain, Forest, Mobile, Photos } from "./components/Slides";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
         <Mobile />
         <Curtain />
         <Photos />
+        <Forest />
       </SlideContainer>
       <ToastContainer />
     </>
