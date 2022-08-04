@@ -1,7 +1,7 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import Slide, { context } from "../Slide";
 import { FcCancel } from "react-icons/fc";
-import tableImg from "../../images/table.jpeg";
+import centerImg from "../../images/p_2.jpg";
 import curtainImg from "../../images/curtain.png";
 import RippleButton from "../RippleButton";
 // import ropeImg from "../../images/rope.png";
@@ -26,14 +26,14 @@ const Curtain = () => {
 const BlurImage = ({ className, img, ...others }) => (
   <div className={"relative " + className} {...others}>
     <img
-      src={tableImg}
+      src={centerImg}
       draggable={false}
       className="w-full blur-[4px]"
       alt="background-blur"
-      style={{ background: `url(${tableImg})`, backgroundSize: "cover" }}
+      style={{ background: `url(${centerImg})`, backgroundSize: "cover" }}
     />
     <img
-      src={tableImg}
+      src={centerImg}
       draggable={false}
       className="absolute top-1/2 left-1/2 h-[70%]"
       alt="foreground-clear"

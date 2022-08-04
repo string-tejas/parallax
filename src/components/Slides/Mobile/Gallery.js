@@ -1,14 +1,15 @@
 import { NotifTray } from "./Menu";
 import { useDragScrollX } from "../../../custom-hooks";
+import galleryData from "./galleryData";
 
 const Gallery = () => {
   return (
     <>
       <NotifTray />
       <GalleryScreen>
-        <GalleryImage src="/img/icons/youtube.png" alt="youtube" />
-        <GalleryImage src="/img/icons/calculator.png" alt="youtube" />
-        <GalleryImage src="/img/icons/gallery.png" alt="youtube" />
+        {galleryData.map((img) => (
+          <GalleryImage src={img.src} alt={img.alt} />
+        ))}
       </GalleryScreen>
     </>
   );

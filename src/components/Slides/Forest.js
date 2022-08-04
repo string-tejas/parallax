@@ -39,8 +39,15 @@ const Forest = () => {
 
 const TextEffect = () => {
   const sentences = [
-    "Hello there how are you ?",
-    "Its good to see you how you've been",
+    `Testing testing...`,
+    "Sadly, I have to inform you that 1/4 of your life is over :(",
+    "But the good news is",
+    "3/4 still remains ...",
+    "Kake sure",
+    "Make sure to enjoy too !",
+    "And don't panic over little things 🤣",
+    "Wishing you luck in all your future endeavors",
+    "Happy Birthday ! 🎂🎊🥳",
   ];
   const { text } = useTypewriter({
     words: sentences,

@@ -2,23 +2,11 @@ import React, { useState, useRef } from "react";
 import tableTexture from "../../images/texture.jpg";
 import Slide from "../Slide";
 import { FcRemoveImage } from "react-icons/fc";
+import photosData from "./photosData";
 
 const Photos = () => {
   const slideRef = useRef();
-  const images = [
-    {
-      src: "/img/icons/youtube.png",
-      alt: "icon",
-    },
-    {
-      src: "/img/icons/calculator.png",
-      alt: "icon",
-    },
-    {
-      src: "/img/icons/notes.png",
-      alt: "icon",
-    },
-  ];
+
   return (
     <Slide
       slideRef={slideRef}
@@ -27,12 +15,12 @@ const Photos = () => {
       icon={<FcRemoveImage className="text-3xl" />}
     >
       <WoodTexture>
-        {images.reverse().map((image, index) => (
+        {photosData.reverse().map((image, index) => (
           <Photo
             src={image.src}
             alt={image.alt}
             key={image.src}
-            rotateOffset={images.length / 2 - index}
+            rotateOffset={photosData.length / 2 - index}
           />
         ))}
       </WoodTexture>
@@ -71,7 +59,7 @@ const Photo = ({ src, rotateOffset = 0 }) => {
         />
         <img
           src={src}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full"
           alt="overtop-img"
         />
       </div>
