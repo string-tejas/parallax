@@ -14,6 +14,9 @@ import panda from "../../../images/panda.jpg";
 
 export const mobileContext = createContext();
 
+// All the mobile logic
+// spent most of the time in this folder
+
 const Mobile = () => {
   const slideRef = useRef();
 

@@ -3,6 +3,8 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
+// I can't figure out why the alert pops up twice
+
 const Code = () => {
   const [typing, setTyping] = useState(false);
   return (

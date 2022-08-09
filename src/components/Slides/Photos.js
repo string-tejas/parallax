@@ -4,6 +4,8 @@ import Slide from "../Slide";
 import { FcRemoveImage } from "react-icons/fc";
 import photosData from "./photosData";
 
+// Fact: The photos never disapper, even outside the viewport
+// I wonder how those pics are arranged outise the viewport
 const Photos = () => {
   const slideRef = useRef();
 

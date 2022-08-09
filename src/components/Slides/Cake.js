@@ -5,6 +5,9 @@ import coffeeImg from "../../images/coffee.png";
 import cakeImg from "../../images/real_cake-removebg.png";
 import { MdDoNotTouch } from "react-icons/md";
 
+// Cake slide with slight parallax effect
+// Slowly scroll down to notice that the cake and coffee are moving
+// Even the background is moving
 const Cake = () => {
   const { offsetY } = useContext(context);
   const slideRef = useRef();

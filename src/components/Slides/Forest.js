@@ -3,6 +3,8 @@ import Slide, { context } from "../Slide";
 import forestImg from "../../images/forest.jpg";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
+// Forest -> Life -> Wisdom
+// Why am I doing this again ?
 const Forest = () => {
   const slideRef = useRef();
   const [focus, setFocus] = useState(false);

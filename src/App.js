@@ -5,6 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import StopIt from "./components/StopIt";
 
+// Toast logic (kindof)
+// Keep track of width for stopit
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
 

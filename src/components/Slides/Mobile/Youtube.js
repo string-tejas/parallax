@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import rick from "../../../images/rick.gif";
 
+// Just a prank
 const Youtube = ({ img }) => {
   const [loading, setLoading] = useState(true);
 

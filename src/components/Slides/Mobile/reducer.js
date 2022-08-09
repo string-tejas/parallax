@@ -7,6 +7,7 @@ export const ACTIONS = {
   youtube: "youtube",
 };
 
+// Mobile state management
 export const reducer = (state, { type, payload }) => {
   switch (type) {
     // iframes

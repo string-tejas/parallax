@@ -14,7 +14,8 @@ const data = [
   { src: "/img/Gallery/g_13.png", alt: "g_13" },
   { src: "/img/Gallery/g_14.png", alt: "g_14" },
   { src: "/img/Gallery/g_15.jpg", alt: "g_15" },
-  { src: "/img/Gallery/g_16.webp", alt: "g_16" },
+  { src: "/img/Gallery/g_16.jpg", alt: "g_16" },
+  { src: "/img/Gallery/g_17.webp", alt: "g_17" },
 ];
 
 export default data;

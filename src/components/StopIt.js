@@ -1,6 +1,8 @@
 import React from "react";
 import stopItImg from "../images/stop.jpg";
 
+// This is an excuse
+// Coz I'm too lazy to make stuff responsive
 const StopIt = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-black">

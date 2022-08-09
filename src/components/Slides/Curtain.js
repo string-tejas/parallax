@@ -6,6 +6,7 @@ import curtainImg from "../../images/curtain.png";
 import RippleButton from "../RippleButton";
 // import ropeImg from "../../images/rope.png";
 
+// Never open the curtain
 const Curtain = () => {
   const slideRef = useRef();
 

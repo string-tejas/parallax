@@ -4,6 +4,7 @@ import { useKey } from "../custom-hooks";
 
 export const context = createContext();
 
+// Scroll logic and toast logic (kindof)
 export const SlideContainer = ({ className, notify, children, ...others }) => {
   const ref = useRef();
   const [offsetY, setOffsetY] = useState(0);

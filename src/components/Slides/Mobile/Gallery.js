@@ -2,6 +2,8 @@ import { NotifTray } from "./Menu";
 import { useDragScrollX } from "../../../custom-hooks";
 import galleryData from "./galleryData";
 
+// logic
+
 const Gallery = () => {
   return (
     <>

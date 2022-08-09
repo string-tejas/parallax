@@ -1,7 +1,8 @@
 const { readdirSync } = require("fs");
 
 // some automation coz me lazy
-// doesn't work in react coz its client side only
+// doesn't work in react coz react works on client side only
+// and this code is for server side image names in json array conversion
 const getData = (dir) => {
   const imageNames = readdirSync(dir);
   const data = [];

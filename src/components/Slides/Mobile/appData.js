@@ -1,3 +1,5 @@
+// can this be used here ?
+
 const generateMenuData = (dispatch, ACTIONS) => {
   const menuData = [
     {
