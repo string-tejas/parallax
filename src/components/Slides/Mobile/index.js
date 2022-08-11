@@ -1,6 +1,6 @@
 import { useRef, useReducer, createContext } from "react";
 import Slide from "../../Slide";
-import wallpaper from "../../../images/watson.png";
+import wallpaper from "../../../images/wallpaper.jpg";
 import lens from "../../../images/lens.png";
 import Menu, { StandBy } from "./Menu";
 import Iframe from "./Iframe";

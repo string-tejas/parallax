@@ -1,7 +1,6 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import Slide, { context } from "../Slide";
-import { FcCancel } from "react-icons/fc";
-import centerImg from "../../images/p_2.jpg";
+import centerImg from "../../images/window_real.jpg";
 import curtainImg from "../../images/curtain.png";
 import RippleButton from "../RippleButton";
 // import ropeImg from "../../images/rope.png";
@@ -11,12 +10,7 @@ const Curtain = () => {
   const slideRef = useRef();
 
   return (
-    <Slide
-      className={"overflow-hidden"}
-      slideRef={slideRef}
-      msg="Don't Open the Curtains"
-      icon={<FcCancel className="text-3xl" />}
-    >
+    <Slide className={"overflow-hidden"} slideRef={slideRef}>
       <BlurImage className="h-screen w-full" />
       <Curtains slideRef={slideRef} />
       <Cover />

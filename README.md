@@ -4,7 +4,7 @@
 
 ### Why ?
 
-I just wanted to created a visually pleasing landing page. This is the first landing page I'm creating so I intend to use this markdown to note down the problems I face and the solution I implement.
+A page with lots of random effects to practice my react js skills. I intend to use this markdown to note down the problems I face and the solution I implement.
 
 # Packages Used
 

@@ -42,14 +42,11 @@ const Forest = () => {
 const TextEffect = () => {
   const sentences = [
     `Testing testing...`,
-    "Sadly, I have to inform you that 1/4 of your life is over :(",
-    "But the good news is",
-    "3/4 still remains ...",
-    "Kake sure",
-    "Make sure to enjoy too !",
-    "And don't panic over little things 🤣",
-    "Wishing you luck in all your future endeavors",
-    "Happy Birthday ! 🎂🎊🥳",
+    "This is a typing effect",
+    "I din;t k",
+    "I don't know what to enter here",
+    "Here's some random text",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!",
   ];
   const { text } = useTypewriter({
     words: sentences,

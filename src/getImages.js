@@ -6,9 +6,10 @@ const { readdirSync } = require("fs");
 const getData = (dir) => {
   const imageNames = readdirSync(dir);
   const data = [];
+  const relativeDir = dir.substring(9);
   imageNames.forEach((img) => {
     data.push({
-      src: `${dir}/${img}`,
+      src: `${relativeDir}/${img}`,
       alt: img.split(".")[0],
     });
   });

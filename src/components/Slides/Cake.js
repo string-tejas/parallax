@@ -34,11 +34,11 @@ const Cake = () => {
   };
 
   return (
-    <Slide slideRef={slideRef} msg="Don't Press Enter" icon={<MdDoNotTouch />}>
+    <Slide slideRef={slideRef} msg="Scroll slowly to see the parallax effect">
       <Table bgFactor={bgFactor} />
       <Coffee coffeeFactor={coffeeFactor} />
       <ShortCake cakeFactor={cakeFactor} cakeShadow={cakeShadow} />
-      <Greeting>Many Many Happy Returns of the Day !!</Greeting>
+      <Greeting>Site with Random effects !</Greeting>
     </Slide>
   );
 };

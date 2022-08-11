@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import tableTexture from "../../images/texture.jpg";
 import Slide from "../Slide";
-import { FcRemoveImage } from "react-icons/fc";
 import photosData from "./photosData";
 
 // Fact: The photos never disapper, even outside the viewport
@@ -12,9 +11,8 @@ const Photos = () => {
   return (
     <Slide
       slideRef={slideRef}
-      msg="Don't Click on photos"
+      msg="Click on photos"
       className="overflow-hidden"
-      icon={<FcRemoveImage className="text-3xl" />}
     >
       <WoodTexture>
         {photosData.reverse().map((image, index) => (
